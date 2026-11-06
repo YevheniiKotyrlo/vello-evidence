@@ -1,0 +1,17 @@
+[package]
+name = "blurred-rounded-rect-cost"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[[bin]]
+name = "blurred-rounded-rect-cost"
+path = "main.rs"
+
+[dependencies]
+# Before: main at the pull request's base. After: the pull request's branch, with
+# vello_cpu = { git = "https://github.com/YevheniiKotyrlo/vello", branch = "fix/blurred-rounded-rect-std-dev" }
+vello_cpu = { git = "https://github.com/linebender/vello", rev = "45d29f2b4bf7adeb101693e10486e16ff8ea8f7a" }
+windows-sys = { version = "0.61", features = ["Win32_System_Threading", "Win32_System_WindowsProgramming"] }
+
+[workspace]
